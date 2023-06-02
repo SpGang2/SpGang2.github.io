@@ -1,0 +1,593 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    html,body {
+  overflow-y: scroll;
+  height: auto;
+  }
+/* devanagari */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJbecmNE.woff2)
+    format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC,
+    U+A830-A839, U+A8E0-A8FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJnecmNE.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfecg.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z11lFc-K.woff2)
+    format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC,
+    U+A830-A839, U+A8E0-A8FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1JlFc-K.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLGT9Z1xlFQ.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z11lFc-K.woff2)
+    format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC,
+    U+A830-A839, U+A8E0-A8FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1JlFc-K.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* devanagari */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z11lFc-K.woff2)
+    format("woff2");
+  unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+25CC,
+    U+A830-A839, U+A8E0-A8FF;
+}
+/* latin-ext */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1JlFc-K.woff2)
+    format("woff2");
+  unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF,
+    U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/poppins/v20/pxiByp8kv8JHgFVrLCz7Z1xlFQ.woff2)
+    format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.4s;
+  font-family: Poppins;
+}
+.nightmode{
+  background-color:#191825;
+}
+.txnight{
+  color: gray;
+}
+.txnight2{
+  color: #7c9ff1;
+}
+.txnight3{
+  color: #19A7CE;
+}
+.boxnight{
+  background-color: rgba(128, 0, 255, 0.244)!important;
+}
+body {
+  background-color: rgb(235, 235, 235);
+  background-image: url(Picturess/figures-1.png);
+  background-repeat: no-repeat;
+  background-size: 600px;
+  background-position: -9px 200;
+  overflow: hidden;
+}
+header {
+  display: flex;
+}
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  transition: all 0.4s;
+}
+.ul-menu {
+  display: flex;
+  transition: all 0.4s;
+  list-style-type: none;
+  margin: 6px;
+}
+.li-menu {
+  padding: 18px;
+  cursor: pointer;
+
+}
+.li-menu:nth-child(odd){
+    color: rgb(115, 0, 255);
+}
+.li-menu:hover{
+  color: rgb(0, 232, 232);
+}
+.li-menu i:hover{
+  color: rgb(0, 232, 232);
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+.header-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.h1-main {
+  text-align: center;
+}
+.post-main {
+  display: flex;
+  flex-direction: column;
+}
+.h2-post-main {
+  text-align: center;
+  color: rgb(89, 0, 255);
+  position: relative;
+}
+.h2-post-main::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background-color:red ; */
+  border-left: 2px solid rgb(47, 0, 219);
+  animation: typeing linear .9s infinite;
+}
+@keyframes typeing {
+  from{border-left: none;}
+}
+.boxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.box {
+  background: rgba(255, 255, 255, 0.54);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(255, 255, 255, 0.32);
+  margin: 3px;
+  width: 210px;
+  height: 230px;
+  margin: 44 9;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.box:hover{
+  transform: translateY(-8px);
+}
+.post2-main {
+  display: flex;
+  flex-direction: column;
+}
+.hamber {
+  display: flex;
+  width: 34px;
+  height: 4px;
+  margin: 10px;
+  background-color: black;
+  position: relative;
+  transition: all 0.3s;
+}
+.hamber::after {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  width: 34px;
+  height: 4px;
+  top: 10px;
+  transition: all 0.3s;
+}
+.after::after {
+  content: "";
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  width: 34px;
+  height: 4px;
+  top: 10px;
+  transition: all 0.3s;
+  transform: rotate(-90deg);
+  top: 0;
+}
+.transform {
+  transition: all 0.3s;
+  transform: rotate(45deg);
+  background-color: rgb(0, 170, 255);
+  position: relative;
+  /* top: 50px !important; */
+  /* left: 140; */
+}
+.alin {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.transform2 {
+  transition: all 0.3s;
+  transform: rotate(-90deg);
+  top: 0;
+  left: 50% !important;
+}
+.h3-post2 {
+  color: rgb(79, 0, 248);
+  position: relative;
+  right: -65;
+}
+.h3-post2::before {
+  content: "";
+  width: 50px;
+  position: absolute;
+  height: 2px;
+  left: -65;
+  top: 16;
+
+  background-color: rgb(115, 0, 255);
+}
+span:hover{
+  transform: rotate(0)!important;
+  cursor: pointer;
+}
+.ul-post2{
+  list-style-position: inside;
+}
+.li-post2 li{
+  position: relative;
+  right: -16;
+}
+#night{
+  position: relative;;
+  width: 55;
+  top: 20;
+  height: 28;
+}
+@media screen and (max-width: 450px) {
+  .hamber {
+    position: fixed;
+    right: 0;
+    top: 20px;
+  }
+  img#night{
+    top: 5;
+  }
+  .ul-menu {
+    position: relative;
+    top: -80px;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.21);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.3px);
+    -webkit-backdrop-filter: blur(4.3px);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    transition: all 0.4s;
+  }
+  .li-menu {
+    font-size: 17px;
+    padding: 8px;
+  }
+  .li-menu:nth-child(1) {
+    color: rgb(111, 0, 255);
+  }
+  .ul-post2{
+    position: relative;
+    padding-top: 15px;
+    left: 10px;
+    height: 300px;
+  }
+  .box{
+    width: 80%;
+  }
+}
+@media screen and (max-width:400px) {
+  .li-menu{
+    font-size: 14px;
+  }
+
+}
+@media screen and (max-width:360px) {
+  .li-menu{
+    font-size: 13px;
+    padding: 11px; 
+  }
+  .hamber{
+    width: 20px;
+  }
+  .hamber::after{
+    width: 20px;
+  }
+}
+/* @media screen and (max-width:430px) {
+  .ul-menu{
+    font-size: 14px;
+    position: relative;
+    top: -80;
+  }
+  
+} */
+@media screen and (min-width: 450px) {
+  .hamber {
+    display: none;
+  }
+  .box{
+    width: 210px;
+  }
+  .li-menu{
+    font-size: 19px;
+  }
+}
+.btnnight{
+  border: none;
+  background-color: rgb(206, 206, 206)!important;
+  padding: 10px;
+  border-radius: 13px;
+}
+</style>
+  </head>
+  <body id="body">
+    <div data-aos="fade-down"
+      data-aos-duration="900" class="container">
+      <header>
+        <nav class="nav-menu">
+          <ul id="ul-menu" class="ul-menu">
+            <li class="li-menu"><i class="fa fa-home"></i> Home</li>
+            <li class="li-menu">Projects</li>
+            <li class="li-menu">contact</li>
+            <img id="night" src="pngwing.com.png" alt="">
+          </ul>
+          <div id="hamber" class="hamber">
+          </div>
+          <div class="logo">
+            <img src="" alt="">
+          </div>
+        </nav>
+      </header>
+      <main>
+        <header data-aos="fade-left"
+          data-aos-anchor="#example-anchor"
+          data-aos-offset="500"
+          data-aos-duration="1000" class="header-main">
+          <h1 id="h1-header" class="h1-main"><span style="color: rgb(115, 0,
+              255);transform: rotate(-6deg);display: inline-block;">Hello
+            </span>,my name's sepehr, i'm a web developer.</h1>
+        </header>
+        <article class="post-main">
+          <h2 id="demo" class="h2-post-main"></h2>
+          <div data-aos="fade-left" data-aos-duration="1000" class="boxes">
+            <div id="box" class="box box1">
+              <div class="picture-box"></div>
+              <div class="caption-box"></div>
+            </div>
+            <div id="box2" class="box box2">
+              <div class="picture-box"></div>
+              <div class="caption-box"></div>
+            </div>
+            <div id="box3" class="box box3">
+              <div class="picture-box"></div>
+              <div class="caption-box"></div>
+            </div>
+            <div id="box4" class="box box4">
+              <div class="picture-box"></div>
+              <div class="caption-box"></div>
+            </div>
+          </div>
+        </article>
+        <article class="post2-main">
+          <h3 class="h3-post2">what can i do?</h3>
+          <ul id="ul-post2" class="ul-post2">
+            <li class="li-post2">Html
+              <ul>
+                <li>SEO</li>
+              </ul>
+            </li>
+            <li class="li-post2">Css
+              <ul>
+                <li>Bootsrap</li>
+                <li>Tailwind</li>
+                <li>Sass</li>
+              </ul>
+            </li>
+            <li class="li-post2">Javascript
+              <ul>
+                <li>react.js</li>
+                <li>node.js</li>
+                <li>vue.js</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="progress-langs">
+            <!-- <progress title="html" value="100" max="100" class="progress-html"></progress>
+            <progress title="css" value="100" max="100" class="progress-css"></progress>
+            <progress title="sass" value="100" max="100" class="progress-sass"></progress>
+            <progress title="javascript" value="50" max="100" class="progress-javascript"></progress> -->
+          </div>
+        </article>
+        <footer class="foot-main">
+        </footer>
+      </main>
+    </div>
+  </body>
+  <!-- <script src="java.js"></script> -->
+  <script>
+var deb = false;
+const hamber = document.getElementById("hamber");
+const list = document.querySelector(".ul-menu");
+hamber.addEventListener("click", () => {
+  if (deb == false) {
+    hamber.classList.add("transform", "after");
+    list.style.top = "0";
+    deb = true;
+  } else {
+    hamber.classList.remove("transform", "after");
+    list.style.top = "-70";
+    deb = false;
+  }
+});
+
+var i = 0;
+var txt = "my projects is here>>";
+var speed = 160;
+(
+    function typeWriter() {
+        if (i < txt.length) {
+
+            document.getElementById("demo").innerHTML += txt.charAt(i);
+          i++;
+          setTimeout(typeWriter, speed);
+        }
+    }
+)();
+const body = document.getElementById("body");
+const night = document.getElementById("night");
+const ulmenu = document.getElementById("ul-menu");
+const ul_post2 = document.getElementById("ul-post2");
+const h1_header = document.getElementById("h1-header");
+const box1 = document.getElementById("box");
+const box2 = document.getElementById("box2");
+const box3 = document.getElementById("box3");
+const box4 = document.getElementById("box4");
+let bool = false;
+night.addEventListener("click",() =>{
+    if(bool==false){
+        body.classList.add("nightmode");
+        night.innerHTML = "light mode";
+        ulmenu.classList.add("txnight");
+        ul_post2.classList.add("txnight2");
+        h1_header.classList.add("txnight3")
+        box1.classList.add("boxnight");
+        box2.classList.add("boxnight");
+        box3.classList.add("boxnight");
+        box4.classList.add("boxnight");
+        bool = true;
+    }
+    else{
+        body.classList.remove("nightmode");
+        night.innerHTML = "night mode";
+        ulmenu.classList.remove("txnight");
+        ul_post2.classList.remove("txnight2");
+        h1_header.classList.remove("txnight3");
+        box1.classList.remove("boxnight");
+        box2.classList.remove("boxnight");
+        box3.classList.remove("boxnight");
+        box4.classList.remove("boxnight");
+        bool = false;
+    }
+})
+</script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <!-- <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script> -->
+</html>
